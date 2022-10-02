@@ -46,7 +46,6 @@ textarea {
   border: 2px solid #fff;
   padding: 32px;
   margin-top: 16px;
-  height: 100;
 
   border-radius: 4px;
   box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.2);
@@ -102,4 +101,15 @@ textarea {
 .tooltiptext.active {
   visibility: visible;
   opacity: 1;
+}
+
+/* Mobile Phone*/
+@media only screen and (max-width: 740px) {
+  .container {
+    border: none;
+    box-shadow: none;
+  }
+  textarea {
+    max-height: 280px;
+  }
 }
