@@ -108,8 +108,32 @@ textarea {
   .container {
     border: none;
     box-shadow: none;
+    padding: 8px;
   }
   textarea {
     max-height: 280px;
+    max-width: 280px;
+  }
+
+  .context h1 {
+    font-size: 46px;
+  }
+}
+
+@media only screen and (max-height: 586px) {
+  textarea {
+    max-height: 240px;
+  }
+}
+
+/* Mobile Phone*/
+@media only screen and (max-height: 412px) {
+  .container {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  textarea {
+    max-height: 180px;
   }
 }
