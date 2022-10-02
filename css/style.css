@@ -40,7 +40,7 @@ textarea {
 }
 
 .container {
-  width: 480px;
+  max-width: 480px;
   margin: auto;
   text-align: center;
   border: 2px solid #fff;
