@@ -1,27 +1,40 @@
 window.onload = () => {
-  var copyBtn = document.getElementById("copy-btn");
-  var textField = document.querySelector("textarea");
+  const copyBtn = document.getElementById("copy-btn");
+  const copyCodeBtn = document.getElementById("copy-code-btn");
+  const textField = document.querySelector("textarea");
 
   copyBtn.onclick = (e) => {
-    let copyText = textField.value;
+    const textValue = textField.value;
     // copied to clipboard
-    navigator.clipboard.writeText(copyText);
+    navigator.clipboard.writeText(textValue);
 
-    // Show message to tooltip
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.classList.add("active");
-    setTimeout(() => {
-      tooltip.classList.remove("active");
-    }, 2000);
+    showToolTip("myTooltip");
+  };
 
-    // tooltip animation
-    const fadeIn = [{ opacity: "0" }, { opacity: "1", visibility: "visible" }];
+  copyCodeBtn.onclick = (e) => {
+    const keyCode = textField.dataset.value;
+    // copied to clipboard
+    navigator.clipboard.writeText(keyCode);
 
-    const fadeTiming = {
-      duration: 500,
-      iterations: 1,
-    };
-
-    tooltip.animate(fadeIn, fadeTiming);
+    showToolTip("myTooltip2");
   };
 };
+
+function showToolTip(id) {
+  // Show message to tooltip
+  const tooltip = document.getElementById(id);
+  tooltip.classList.add("active");
+  setTimeout(() => {
+    tooltip.classList.remove("active");
+  }, 2000);
+
+  // tooltip animation
+  const fadeIn = [{ opacity: "0" }, { opacity: "1", visibility: "visible" }];
+
+  const fadeTiming = {
+    duration: 500,
+    iterations: 1,
+  };
+
+  tooltip.animate(fadeIn, fadeTiming);
+}

@@ -18,13 +18,27 @@
           <h1>SDA - Share</h1>
 
           <div class="tooltip">
-            <button type="button" id="copy-btn">
-              Copy
-              <span class="tooltiptext" id="myTooltip">Copied!</span>
+            <button type="button" class="btn" id="copy-btn">
+              <span class="content">
+                Copy Text
+                <span class="tooltiptext" id="myTooltip">Copied!</span>
+              </span>
+            </button>
+            <button type="button" class="btn" id="copy-code-btn">
+              <span class="content">
+                Copy Key Code
+                <span class="tooltiptext" id="myTooltip2">Copied!</span>
+              </span>
             </button>
           </div>
 
-          <textarea name="sda-text" id="" cols="30" rows="15"></textarea>
+          <textarea
+            data-value="{'a': 1, 'b': 2}"
+            name="sda-text"
+            id=""
+            cols="30"
+            rows="15"
+          ></textarea>
         </div>
       </div>
     </div>
